@@ -17,7 +17,7 @@
   --danger: #ff6b6b;
   --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
   --radius: 12px;
-  --header-h: 64px;
+  --header-h: 76px;
   --nav-w: 268px;
   --font: "Segoe UI Variable", "Segoe UI", "Noto Sans", system-ui, sans-serif;
   --mono: "Cascadia Code", "Cascadia Mono", "Consolas", ui-monospace, monospace;
@@ -86,6 +86,24 @@ a { color: var(--accent); }
   margin: 0;
   color: var(--text-muted);
   font-size: 12px;
+}
+
+.app-version {
+  margin: 4px 0 0;
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.02em;
+  overflow-wrap: anywhere;
+}
+
+.app-version a {
+  color: inherit;
+  font-family: var(--mono);
+  text-underline-offset: 2px;
+}
+
+.app-version a:hover {
+  color: var(--accent);
 }
 
 .header-actions {
@@ -466,7 +484,7 @@ select, .text-input {
   .nav-section-label { display: none; }
   .nav-btn { width: auto; white-space: nowrap; }
   .search-wrap { max-width: none; }
-  .brand p { display: none; }
+  .brand p:not(.app-version) { display: none; }
   .chip { width: 100%; }
   .option, .controls { min-width: 0; }
   .option { grid-template-columns: 1fr; }
